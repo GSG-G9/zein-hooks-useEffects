@@ -1,4 +1,3 @@
-import { cleanup } from "@testing-library/react";
 import React, { useEffect, useState } from "react";
 
 const Axis = () => {
@@ -11,7 +10,7 @@ const Axis = () => {
       setAY(e.clientY);
     });
 
-    return cleanup();
+    return clearInterval();
   }, []);
 
   return (

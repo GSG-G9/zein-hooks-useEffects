@@ -1,10 +1,9 @@
-import { cleanup } from "@testing-library/react";
 import React, { useEffect, useState } from "react";
 
 const Count = () => {
 
     const [count, setCount] = useState(0);
-    
+
     const incrementCount = () => {
         setCount((c)=>c+1);
     }
@@ -12,7 +11,7 @@ const Count = () => {
     useEffect(()=>{
         document.onmousedown(incrementCount);
 
-        return cleanup();
+        return clearInterval();
     }, [count])
 
     return <div>

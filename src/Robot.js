@@ -1,4 +1,3 @@
-import { cleanup } from "@testing-library/react";
 import React, { useEffect, useState } from "react";
 
 const Robot = () => {
@@ -10,7 +9,7 @@ const Robot = () => {
     setWord(search);
     setUrl(`https://robohash.org/:${word}`);
 
-    return cleanup();
+    return clearInterval();
   }, [search, word]);
 
   return (
