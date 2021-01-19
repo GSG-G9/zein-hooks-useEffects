@@ -4,8 +4,6 @@ const Count = () => {
 
     const [count, setCount] = useState(0);
 
-    
-
     const incrementCount = () => {
         setCount((c)=>c+1);
     }
