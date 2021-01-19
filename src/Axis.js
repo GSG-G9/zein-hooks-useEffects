@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Axis = () => {
   const [AX, setAX] = useState(0);
   const [AY, setAY] = useState(0);
 
-  document.onmousemove((e) => {
-    setAX(e.clientX);
-    setAY(e.clientY);
-  });
+  useEffect(() => {
+    document.onmousemove((e) => {
+      setAX(e.clientX);
+      setAY(e.clientY);
+    });
+
+    return clearInterval();
+  }, []);
 
   return (
     <div
